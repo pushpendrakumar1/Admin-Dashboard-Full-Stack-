@@ -30,7 +30,7 @@ def login_page(request):
             return render(request, 'account_settings.html', {'email': email, 'password': password, 'infos': info})
         else:
             messages.error(request, "Invalid Credentials!")
-            return redirect('/login_page')
+            return redirect('/')
     return render(request, 'login.html',)
 
 
