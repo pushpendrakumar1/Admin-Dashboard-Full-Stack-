@@ -27,7 +27,7 @@ def login_page(request):
             # messages.success(request, "Login Successfully!")
             # Retrieve the 'infos' object
             info = infos.objects.get(email=email, password=password)           
-            return render(request, 'account_settings.html', {'email': email, 'password': password, 'infos': info})
+            return render(request, 'dashboard.html', {'email': email, 'password': password, 'infos': info})
         else:
             messages.error(request, "Invalid Credentials!")
             return redirect('/')
