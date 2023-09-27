@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ {% load static %}
+<head>
+    <title>Excel Comparison</title>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="{% static "images/bat.jpg" %}" type="image/x-icon">
+
+
+</head>
+<body>
+    <h1>Excel Comparison</h1>
+    <form action="{% url 'compare' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file1">File 1:</label>
+        <input type="file" id="file1" name="file1"><br><br>
+        <label for="file2">File 2:</label>
+        <input type="file" id="file2" name="file2"><br><br>
+        <input type="submit" value="Compare">
+    </form>
+    <h1>Comparison Result</h1>
+    <p>{{ result }}</p>
+    <br>
+    {% if download_link %}
+        <a href="{{ download_link }}">Download Grouped Differences</a>
+    {% endif %}
+</body>
+</html>

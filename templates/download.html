@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Download Processed Files</title>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="{% static "images/bat.jpg" %}" type="image/x-icon">
+
+</head>
+<body>
+    <h1>Download Processed Files</h1>
+    <ul>
+        {% for file in processed_files %}
+        <li>
+            <a href="{% url 'downloaded' file.id %}">{{ file.file1.name }}</a> (Enter ID 1: {{ file.enter_id1 }})
+            <br>
+            <a href="{% url 'downloaded' file.id %}">{{ file.file2.name }}</a> (Enter ID 2: {{ file.enter_id2 }})
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

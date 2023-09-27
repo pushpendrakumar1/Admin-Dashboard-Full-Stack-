@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+     {% load static %}
+<head>
+    <title>Script Processing Result</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="{% static "images/bat.jpg" %}" type="image/x-icon">
+
+</head>
+<body>
+    <h1>Script Processing Result</h1>
+    <p>Processing completed. Download the processed folders:</p>
+    <a href="/download/{{ download_links.folder1 }}">Download Folder 1</a><br>
+    <a href="/download/{{ download_links.folder2 }}">Download Folder 2</a>
+</body>
+</html>
