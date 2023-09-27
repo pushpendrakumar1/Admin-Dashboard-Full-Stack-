@@ -11,8 +11,8 @@ from .views  import upload_file, download_file
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path("", views.index1, name='myapp'),
-    path("login_page", views.login_page, name='login_page'),
+    # path("", views.index1, name='myapp'),
+    path("", views.login_page, name='login_page'),
     path("signup", views.signup, name='signup'),
     path("datatable", views.datatable, name='datatable'),
     path("forgot", views.forgot, name='forgot'),
