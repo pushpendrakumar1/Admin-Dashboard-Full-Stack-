@@ -43,12 +43,6 @@
 
 
 
-
-
-
-
-
-
     <style>
         #table_info{
             padding-left: 10px !important;
@@ -156,11 +150,11 @@
 
         @media only screen and (max-width: 1600px) {
             .nav-link.active {
-                width: 125px;
+                width: 150px;
             }
 
             .nav-link:hover {
-                width: 125px;
+                width: 150px;
             }
 
 
@@ -742,7 +736,9 @@ font-family: 'Alfa Slab One', cursive;
       0 0 5px #0ff,
       0 0 5px #0ff;
   }
-
+/*.col {
+    flex: 1 0 0%;
+}*/
 
 
     </style>
@@ -950,7 +946,7 @@ font-family: 'Alfa Slab One', cursive;
 
         <div class="row">
 
-            <div class="col-lg-1" id="div1">
+            <div class="col-lg-1" id="div1" style="width: 170px !important;">
                 <nav class="navbar navbar-expand navbar-light bg-light">
                     <div class="container" style="padding: 0px 0px 0px 0px ;">
                         <!-- <div class="container-fluid"> -->
@@ -971,16 +967,16 @@ font-family: 'Alfa Slab One', cursive;
 										</li>
                                         <li class="nav-item">
 
-                                            <a class="nav-link " href="/activitylist"><i
+                                            <a class="nav-link active" href="/activitylist"><i
                                                     class="fa fa-list me-1 pe-2"></i>Activity List</a>
                                         </li>
-										<li class="nav-item " style="width:140px ;">
+										<li class="nav-item " >
 											<a class="nav-link  " href="/userlist"><i
 													class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
 										</li>
                                         <li class="nav-item">
 
-                                            <a class="nav-link active" href="/createactivity"><i
+                                            <a class="nav-link " href="/createactivity"><i
                                                     class="fa fa-road me-1 pe-2"></i>Activity</a>
                                         </li>
 
@@ -1077,7 +1073,7 @@ font-family: 'Alfa Slab One', cursive;
 
                 </nav>
             </div>
-            <div class="col-lg-11 border " id="myDiv">
+            <div class="col border " id="myDiv">
 
 
                 <div class="content-wrapper">
@@ -1090,7 +1086,7 @@ font-family: 'Alfa Slab One', cursive;
 
                     <div class="row dashboard-header ">
 
-                        <div class="col-lg-4 col-md-6 " style="padding: 1px 5px 1px 0px;">
+                        <div class="col-lg-4 col-md-6 ps-2" style="padding: 1px 5px 1px 0px;">
                             <div class="card dashboard-product p-3">
                                 <h2 class="dashboard-total-products">INTEGRATION SUPPORT</h2>
                                 <div class="row dashboard-header pt-4">
@@ -1134,7 +1130,7 @@ font-family: 'Alfa Slab One', cursive;
                             </div>
                         </div>
                         <div class="col-lg-4" style="padding: 0px 4px 0px 0px;">
-                        <div class="col-lg-12 col-md-6" style="padding: 1px 5px 1px 0px;">
+                        <div class="col-lg-12 col-md-6 ps-2" style="padding: 1px 5px 1px 0px;">
                             <div class="card dashboard-product p-3">
                                 <h2 class="dashboard-total-products">REMOTE INTEGRATION</h2>
                                 <div class="row dashboard-header pt-4">
@@ -1149,7 +1145,7 @@ font-family: 'Alfa Slab One', cursive;
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-6" style="padding: 1px 5px 1px 0px;">
+                        <div class="col-lg-12 col-md-6 ps-2" style="padding: 1px 5px 1px 0px;">
                             <div class="card dashboard-product p-3">
                                 <h2 class="dashboard-total-products pt-4">FIELD INSTALLATION</h2>
                                 <div class="row dashboard-header">
@@ -1221,8 +1217,7 @@ font-family: 'Alfa Slab One', cursive;
                       </div>
 
                     <div class="row">
-                <div class="btnlist1 col-lg-6" style="float: right; margin-bottom: 10px;
-                ">
+                <div class="btnlist1 col-lg-6" style="float: right; margin-bottom: 10px;">
                         <button type="button" class="btn1 btn-success ms-2 mt-3"  style="text-decoration: none; color:#fff"
                     onclick="ExportToExcel('xlsx')">Export</button>
                 </div>
@@ -1248,7 +1243,7 @@ font-family: 'Alfa Slab One', cursive;
                     <div class="row mb-3" style="overflow-x:auto;">
 
 
-                        <table id="table"
+                        <table id="table" style="width: 100%;"
                             class="table table-responsive table-striped table-bordered table-bordered table-hover cell-border dataTable no-footer ms-3"
                             aria-describedby="table_info">
 
@@ -1269,13 +1264,13 @@ font-family: 'Alfa Slab One', cursive;
                                     <th scope="col"> </th>
                                     <th scope="col"> </th>
                                     <th scope="col"> </th>
-                                    <th class="blank ps-1 pe-1 pt-2" scope="col">Ix Date</th>
-                                    <th class="blank ps-5" scope="col ">5G IX Date </th>
-                                    <th class="blank ps-5" scope="col">Ticket Status</th>
-                                    <th class="blank ps-5" scope="col">IX Status</th>
-                                    <th class="blank p-0 ps-1 pt-2" scope="col">CX Status</th>
-                                    <th class="blank p-0 ps-1 pt-2" scope="col">Added By</th>
-                                   <th  scope="col" style="display: none;"></th>
+                                    <th class="blank ps-1 pe-1 pt-2" scope="col" style="display: none;">Ix Date</th>
+                                    <th class="blank ps-5" scope="col " style="display: none;">5G IX Date </th>
+                                    <th class="blank ps-5" scope="col" style="display: none;">Ticket Status</th>
+                                    <th class="blank ps-5" scope="col" style="display: none;">IX Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col" style="display: none;">CX Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col" style="display: none;">Added By</th>
+                                  <th  scope="col" style="display: none;"></th>
                                     <th scope="col" style="display: none;"></th>
                                     <th  scope="col" style="display: none;"></th>
                                     <th  scope="col" style="display: none;"></th>
@@ -1345,12 +1340,12 @@ font-family: 'Alfa Slab One', cursive;
                                     <td class="blank p-0">  <button type="button" class="btn btn-primary "id="buttr">{{ info.Field_Integration }}</button></td>
                                     <td class="blank p-0">    <button type="button" class="btn btn-info "id="buttr">{{ info.remote_Integration }}</button></td>
                                     <td class="blank p-0"> <button type="button" class="btn btn-warning  "id="buttr">{{ info.Field_Installation }}</button></td>
-                                    <td>{{ info.Ix_Date }}</td>
-                                    <td>{{ info.G_IX_date }}</td>
-                                    <td>{{ info.CX_Status }}</td>
-                                    <td class="blank p-0 ps-1">Pending</td>
-                                    <td class="blank p-0 ps-1">{{ info.CX_Status }}</td>
-                                   <td class="blank p-0 ps-1">{{ info.Added_By }}</td>
+                                    <td style="display: none;">{{ info.Ix_Date }}</td>
+                                    <td style="display: none;">{{ info.G_IX_date }}</td>
+                                    <td style="display: none;">{{ info.CX_Status }}</td>
+                                    <td class="blank p-0 ps-1" style="display: none;">Pending</td>
+                                    <td class="blank p-0 ps-1" style="display: none;">{{ info.CX_Status }}</td>
+                                   <td class="blank p-0 ps-1" style="display: none;">{{ info.Added_By }}</td>
                                      <td style="display: none;" >{{ info.site_name }}</td>
                                     <td style="display: none;" >{{ info.address }}</td>
                                     <td  style="display: none;" >{{ info.latitude }}</td>
@@ -1760,9 +1755,7 @@ font-family: 'Alfa Slab One', cursive;
             </div>
 
         </div>
-        <div class="col-lg-2">
 
-        </div>
     </div>
 
     </div>
